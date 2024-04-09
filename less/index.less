@@ -1,0 +1,267 @@
+@import 'base';
+
+@vw:3.75vw;
+
+.navbar-default{
+    background-color: transparent!important;
+    border: 0!important;
+    background-image: linear-gradient(#000,transparent)!important;
+}
+.navbar-nav{
+    background-color: #fff;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #333!important;
+}
+.navbar-brand{
+    img{
+        margin-top: (-15/@vw);
+        height: (50/@vw);
+    }
+}
+// 轮播图
+.carousel{
+    img{
+        height: 100%!important;
+    }
+    @media (max-width: 992px) {
+        .item{
+            height: 400px;
+        }
+    }
+    @media (max-width: 768px) {
+        .item{
+            height: 250px;
+        }
+    }
+    @media (min-width: 992px) {
+        .item{
+            height: 500px;
+        }
+    }
+}
+// 搜索
+.search{
+    display: flex;
+    justify-content: space-between;
+    width: (290/@vw);
+    height: (35/@vw);
+    margin: 0 auto;
+    input{
+        width: (250/@vw);
+        height: (35/@vw);
+        padding-left: (20/@vw);
+        border: none;
+        border-bottom: (1/@vw) solid blue;
+        &::placeholder{
+            font-size: (15/@vw);
+            color: #bca0da;
+        }
+    }
+    a{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: blue;
+        border-radius: (10/@vw);
+        span{
+            color: #fff;
+            font-size: (20/@vw);
+        }
+    }
+
+} 
+// 新闻头条
+.head-centent{
+    ul{
+        li{
+            img{
+                height: (200/@vw);
+                border-radius: (8/@vw);
+            }
+            span{
+                font-size: (15/@vw);
+            }
+        }
+    }
+}
+// 通用样式
+.pannel{
+    width: (325/@vw);
+    margin: (56/@vw) auto 0;
+    .pannel-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left{
+            h4{
+                font-weight: 400;
+                font-size: (18/@vw);
+            }
+            h3{
+                font-weight: 400;
+                font-size: (27/@vw);
+            }
+        }
+        a{
+            border-bottom: (1/@vw) solid blue;
+            font-size: (12/@vw);
+        }
+    }
+    .content{
+        ul{
+            li{
+                a{
+                    display: block;
+                    padding-top: (20/@vw);
+                    padding-bottom: (20/@vw);
+                    border-bottom: (1/@vw) solid #ccc;
+                    font-size: (16/@vw);
+                }
+            }
+        }
+    }
+}
+// 媒体
+.medium{
+    height: (300/@vw);
+    background-image: url(../images/meiti.jpeg);
+    background-size: cover;
+    .mask{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        background-color: rgba(0, 0, 136, .5);
+        .top{
+            color: #fff;
+            text-align: center;
+            div{
+                width: (300/@vw);
+                margin: 0 auto;
+                border-top: (2/@vw) solid #ccc;
+                padding-top: (20/@vw);
+                font-size: (18/@vw);
+            }
+            h2{
+                font-size: (17/@vw);
+                font-weight: 400;
+            }
+            a{
+                line-height: (50/@vw);
+                padding: 0 (10/@vw) (20/@vw);
+                color: #fff;
+                border-bottom: (2/@vw) solid #ccc;
+            }
+        }
+        .bottom{
+            ul{
+                display: flex;
+                justify-content: space-evenly;
+                li{
+                    a{
+                     display: inline-block;
+                     height: (33/@vw);
+                     width: (33/@vw);
+                     border-radius: (16.5/@vw);
+                     background-color: blue;
+                     text-align: center;
+                     line-height: (33/@vw);
+                     
+                         span{
+                            color: #fff;
+                            font-size: (20/@vw);
+                         }
+                    }
+                 }
+            }
+        }
+    }
+}
+// 媒体内容
+.medium-content{
+    margin: (-20/@vw) (15/@vw) 0;
+   li{
+        a{
+            position: relative;
+            display: inline-block;
+            height: (200/@vw);
+            width: 100%;
+            p{
+                position: absolute;
+                left: 0;
+                bottom: (-4/@vw);
+                display: flex;
+                flex-direction: column;
+                color: #fff;
+                i{
+                    span{
+                        border-bottom: (4/@vw) solid red;
+                    }
+                }
+            }
+        }
+   }
+}
+// 常用链接
+.often{
+    .top{
+        text-align: center;
+        h2{
+            padding: (55/@vw) 0 (25/@vw);
+        }
+    }
+    .bottom{
+        display: flex;
+        justify-content: space-around;
+        .left{
+            width: (143/@vw);
+            a{
+                display: inline-block;
+                width: (143/@vw);
+                height: (51/@vw);
+                border-bottom: (1/@vw) solid #ccc;
+            }
+        }
+    }
+}
+// 底部标签
+footer{
+    position: relative;
+    height: (287.5/@vw);
+    margin-top: (249/@vw);
+    background-color: #c8cfd6;
+    .box{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: (327.5/@vw);
+        width: 90%;
+        background-color: #441272;
+        text-align: center;
+        .qr-code{
+            position: absolute;
+            left: 50%;
+            top: (-100/@vw);
+            transform: translate(-50%,0);
+            width: (200/@vw);
+            height: (200/@vw);
+            color: #fff;
+        }   
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-top: (150/@vw);
+            height: (180/@vw);
+            color: #fff;
+            img{
+                height: (51.23/@vw);
+            }
+        }
+    }
+}
+
